@@ -19,6 +19,7 @@ build/
 gradle/
 gradlew
 gradlew.bat
+.gradle
 
 # IntelliJ IDE
 *.iml
