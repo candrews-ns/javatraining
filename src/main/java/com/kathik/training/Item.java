@@ -25,17 +25,15 @@ public class Item {
         return result;
     }
 
-    // TODO Not sure if this is correct
     @Override
     public boolean equals(Object object) {
         // Order of operations with instanceof keyword sucks in Java
         if (!(object instanceof Item)) {
             return false;
         }
+        Item other = (Item) object;
 
-        if (((Item) object).getSku().contains("widget")) {
-            return true;
-        } else if (((Item) object).getSku().equals(this.sku) && ((Item) object).getCost() == this.cost) {
+        if (other.sku.equals(this.sku) && other.cost == this.cost) {
             return true;
         }
         return false;
